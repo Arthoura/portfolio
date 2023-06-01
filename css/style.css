@@ -1,0 +1,295 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700;900&display=swap');
+
+/* Configurações de reset geral */
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --cor-header: #eef0ff;
+  --cor-texto-principal: #030031;
+  --cor-experiencia: #e1e1e1;
+  --cor-formacao: #323245;
+  --cor-texto-rodapé: #cccccc;
+  --cor-texto-rodapé2: #8f8f8f;
+  --cor-texto-destaque: #030031;
+  --cor-texto-formacao: #a9c7d8;
+  --cor-background-formacao: #01001e;
+  --cor-descricao-experiencia: #525252;
+}
+a{
+  text-decoration: none;
+  color: var(--cor-texto-destaque);
+}
+body {
+  font-family: "Fira Sans", sans-serif;
+  color: var(--cor-texto-destaque);
+}
+/* Definições de classes genéricas */
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+/* Definições do header */
+header {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background-color: var(--cor-header);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+header .apresentacao {
+  margin-left: 100px;
+}
+header h2 {
+  display: inline-block;
+  color: var(--cor-texto-principal);
+  font-size: 3rem;
+  margin-left: 10px;
+}
+header nav {
+  align-self: center;
+  justify-self: end;
+  margin-right: 80px;
+}
+nav a {
+  text-decoration: none;
+  color: var(--cor-texto-principal);
+  font-size: 1.5rem;
+  margin-right: 40px;
+  padding: 10px;
+}
+nav a:hover{
+  padding: 10px;
+  background-color: var(--cor-texto-destaque);
+  color: white;
+  border-radius: 4px;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.221);
+}
+nav li{
+  display: inline-block;
+}
+
+/* Definições do main */
+
+/* Seção "Apresentação" */
+
+main .apresentacao{
+  margin-left: 140px;
+  margin-top: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 620px));
+  background-color: white;
+}
+main .apresentacao img{
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+main .apresentacao h1{
+  max-width: 31rem;
+  font: bold 4.5rem "Fira Sans", sans-serif;
+  line-height: 4.5rem;
+  color: var(--cor-texto-principal);
+}
+main .apresentacao .descricao{
+  position: relative;
+  align-self: center;
+  z-index: 0;
+}
+main .apresentacao .descricao .detalhe{
+  width: 120px;
+  position: absolute;
+  left:-55px;
+  top:-92px;
+  z-index: -1;
+}
+
+/* Seção "Experiência"*/
+
+main .experiencia{
+  margin-left: 140px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 620px));
+  /* gap:200px; */
+  margin-top: 260px;
+}
+
+main .experiencia h1{
+  max-width:340px;
+  margin-left: 20px;
+  word-wrap: break-word;
+  font-size: 9rem;
+  line-height: 9rem;
+  color: var(--cor-experiencia);
+}
+
+main .experiencia p{
+  margin-top: 13px;
+  font-size: 1.5rem;
+  margin-bottom: 70px;
+}
+
+main .experiencias{
+  max-width: 620px;
+  align-self: start;
+  justify-self: start;
+}
+
+main strong{
+  color: var(--cor-texto-destaque);
+}
+
+/* Caixinhas contendo as experiências */
+main .experiencia-item{
+  grid-template-columns: minmax(200px,300px) minmax(120px, 250px);
+  background-color: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 40px;
+  padding: 20px 0px 10px 20px;
+  border-radius: 4px;
+  column-gap: 90px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+main .experiencia-item::before{
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 20px;
+  top:24px;
+  left:-4px;
+  background-image: linear-gradient(to bottom, #1100FF, #07006F);
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+main .experiencia-item:hover{
+  transform: translate(-10px, -5px);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.105);
+}
+main .experiencia-item p{
+  font-size: 0.9rem;
+  margin-top: 0px;
+}
+main .experiencia-item .contratante{
+  margin-bottom: 10px;
+}
+main .tecnologias{
+  flex-wrap: wrap;
+}
+main .tecnologia-item h4{
+  font-weight: 900;
+  font-size: 1rem;
+  padding: 5px 10px;
+  margin: 0px 5px 10px 0px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #eaeaea;
+  transition: .2s;
+}
+main .tecnologias{
+  max-height: 30px;
+}
+/* Animações dos nomes das tecnologias */
+main .tecnologia-item h4:hover{
+  transform: translate(-3px, -5px);
+  font-size: 1.1rem;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.185);
+}
+main .javascript h4:hover{
+  background-image: linear-gradient(to bottom,#FFDA00, #ff8800);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main .github h4:hover{
+  color: transparent;
+  background-image: linear-gradient(to bottom,#FF00AE, #AD00FF);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+main .git h4:hover{
+  background-image: linear-gradient(to bottom,#FF3000, #FF8A00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main .css h4:hover{
+  background-image: linear-gradient(to bottom,#BBEE22, #38A408);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main .html h4:hover{
+  background-image: linear-gradient(to bottom,#FFA400, #FF2E00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main .design h4:hover{
+  background-image: linear-gradient(to bottom,#C810FE, #8102F0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main .cmais h4:hover{
+  background-image: linear-gradient(to bottom,#00E0FF, #0012B3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main .arduino h4:hover{
+  background-image: linear-gradient(to bottom,#00D1FF, #00AB11);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+/* Seção "Formação" */
+
+/* Definições do footer */
+
+footer {
+  padding: 120px 60px 0px 60px;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  background-color: #000;
+  position: relative;
+}
+footer .texto-rodape p {
+  max-width: 420px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--cor-texto-rodapé);
+}
+footer::after {
+  position: absolute;
+  content: "";
+  height: 150px;
+  width: 4px;
+  background-image: linear-gradient(#1100FF, #07006F);
+
+}
+footer .contato {
+  display: grid;
+  color: #fff;
+  font-size: 2.25rem;
+  gap: 30px;
+}
+footer .autoria {
+  color: var(--cor-texto-rodapé2);
+  grid-column: 1/-1;
+  justify-self: center;
+  margin-top: 60px;
+  padding-bottom: 60px;
+}
+footer .separador {
+  position: absolute;
+  content: "";
+  top: 0px;
+}
