@@ -79,6 +79,16 @@ nav li{
 /* Definições do main */
 
 /* Seção "Apresentação" */
+/* Alterações a serem add no @media para telas com zoom baixo 
+body{
+  display: flex;
+  flex-direction: column;
+}
+main{
+  width: 60vw;
+  align-self: center;
+  justify-items: center;
+} */
 
 main .apresentacao{
   margin-left: 140px;
@@ -144,7 +154,6 @@ main .experiencias{
 main strong{
   color: var(--cor-texto-destaque);
 }
-
 /* Caixinhas contendo as experiências */
 main .experiencia-item{
   grid-template-columns: minmax(200px,300px) minmax(120px, 250px);
@@ -156,6 +165,7 @@ main .experiencia-item{
   column-gap: 90px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   position: relative;
+  transition: .3s;
 }
 main .experiencia-item::before{
   position: absolute;
@@ -165,8 +175,6 @@ main .experiencia-item::before{
   top:24px;
   left:-4px;
   background-image: linear-gradient(to bottom, #1100FF, #07006F);
-  transition-duration: .3s;
-  transition-timing-function: ease;
 }
 main .experiencia-item:hover{
   transform: translate(-10px, -5px);
@@ -175,12 +183,22 @@ main .experiencia-item:hover{
 main .experiencia-item p{
   font-size: 0.9rem;
   margin-top: 0px;
+  margin-bottom: 10px;
 }
 main .experiencia-item .contratante{
   margin-bottom: 10px;
 }
+main .experiencia-item .periodo{
+  margin-bottom: 0px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--cor-experiencia);
+  opacity: 1;
+}
+
 main .tecnologias{
   flex-wrap: wrap;
+  margin-bottom: 70px;
 }
 main .tecnologia-item h4{
   font-weight: 900;
@@ -250,6 +268,108 @@ main .arduino h4:hover{
   color: transparent;
 }
 /* Seção "Formação" */
+main .formacao{
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--cor-background-formacao);
+  color: white;
+}
+main .formacao h1{
+  margin-top: 110px;
+  margin-left: 140px;
+  max-width: 410px;
+  word-wrap: break-word;
+  color: var(--cor-formacao);
+  font-size: 9rem;
+}
+main .formacao .descricao-formacao p{
+  color:var(--cor-texto-formacao);
+  margin-top: 137px;
+  font-size: 1.5rem;
+  margin-bottom: 70px;
+  max-width: 623px;
+}
+main .formacao .caixa{
+  margin-top: 155px;
+  grid-template-columns: repeat(2, 200px);
+  gap:100px;
+}
+main .formacao .caixa-item{
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 20px;
+  max-width: 200px;
+  position: relative;
+}
+main .formacao #bacharel::before, #mestrando::before{
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 20px;
+  top:24px;
+  left:-px;
+  background-image: linear-gradient(to bottom, #1100FF, #07006F);
+}
+main .caixa-item h6{
+  font-size: 1rem;
+  color: #A9C7D8;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  font-weight: normal;
+}
+main .caixa-item h4{
+  margin-bottom: 36px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+main .caixa-item h5{
+  color: #A9C7D8;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+main .formacao .intensivos{
+  margin-top: 110px;
+  max-width: 440px;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  position: relative;
+}
+main .formacao .intensivos h4, .linguas h4{
+  grid-column: 1/-1;
+  margin-bottom: 30px;
+}
+main .formacao .titulo-cursos::before{
+  position: absolute;
+  content: url(../imagens/cursos.svg);
+  left:-40px;
+}
+main .formacao .linguas{
+  position: relative;
+  margin-bottom: 120px;
+}
+main .formacao .titulo-idiomas::before{
+  position: absolute;
+  content: url(../imagens/linguas.svg);
+  left:-40px;
+}
+main .formacao ul{
+  list-style: none;
+  line-height: 1.56rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+main .formacao li{
+  margin-bottom: 20px;
+}
+
+main .formacao .list-horas{
+  justify-self: end;
+}
+main .formacao .cor-fonte-detalhe{
+  color: var(--cor-texto-formacao);
+}
 
 /* Definições do footer */
 
