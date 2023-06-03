@@ -28,11 +28,9 @@ body {
   color: var(--cor-texto-destaque);
 }
 /* Definições de classes genéricas */
-
 .grid {
   display: grid;
 }
-
 .flex {
   display: flex;
 }
@@ -47,6 +45,9 @@ header {
 header .apresentacao {
   margin-left: 100px;
 }
+header .menu-burguer{
+  display: none;
+}
 header h2 {
   display: inline-block;
   color: var(--cor-texto-principal);
@@ -56,7 +57,6 @@ header h2 {
 header nav {
   align-self: center;
   justify-self: end;
-  margin-right: 80px;
 }
 nav a {
   text-decoration: none;
@@ -79,16 +79,6 @@ nav li{
 /* Definições do main */
 
 /* Seção "Apresentação" */
-/* Alterações a serem add no @media para telas com zoom baixo 
-body{
-  display: flex;
-  flex-direction: column;
-}
-main{
-  width: 60vw;
-  align-self: center;
-  justify-items: center;
-} */
 
 main .apresentacao{
   margin-left: 140px;
@@ -129,31 +119,28 @@ main .experiencia{
   /* gap:200px; */
   margin-top: 260px;
 }
-
 main .experiencia h1{
-  max-width:340px;
+  max-width:360px;
   margin-left: 20px;
   word-wrap: break-word;
   font-size: 9rem;
   line-height: 9rem;
   color: var(--cor-experiencia);
 }
-
 main .experiencia p{
   margin-top: 13px;
   font-size: 1.5rem;
   margin-bottom: 70px;
 }
-
 main .experiencias{
   max-width: 620px;
   align-self: start;
   justify-self: start;
 }
-
 main strong{
   color: var(--cor-texto-destaque);
 }
+
 /* Caixinhas contendo as experiências */
 main .experiencia-item{
   grid-template-columns: minmax(200px,300px) minmax(120px, 250px);
@@ -281,6 +268,9 @@ main .formacao::before{
   top: -60px;
   left: 80px;
 }
+main .formacao strong{
+  color:white;
+}
 main .formacao h1{
   margin-top: 110px;
   margin-left: 140px;
@@ -309,7 +299,6 @@ main .formacao .caixa-item{
   position: relative;
   transition: .4s;
 }
-
 main .formacao #bacharel::after{
   position: absolute;
   content: "2016 - 2022";
@@ -322,7 +311,6 @@ main .formacao #bacharel::after{
   opacity: 0;
   transition: .4s;
 }
-
 main .formacao #mestrando::after{
   position: absolute;
   content: "2023 - now";
