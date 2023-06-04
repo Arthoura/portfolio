@@ -180,7 +180,6 @@ main .experiencia-item .periodo{
   font-size: 1.2rem;
   font-weight: bold;
   color: var(--cor-experiencia);
-  opacity: 1;
 }
 
 main .tecnologias{
@@ -430,7 +429,6 @@ footer::after {
   height: 150px;
   width: 4px;
   background-image: linear-gradient(#1100FF, #07006F);
-
 }
 footer .contato {
   display: grid;

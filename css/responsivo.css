@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-
-@media (max-width:620px){ /*Para valores ABAIXO que 620px*/
-    
-}
 @media (max-width:805px){ /*Para tamanhos de tela abaixo de 855px e acima de 690px*/
     header .menu-burguer{
         width: 40px;
@@ -32,7 +28,195 @@
     header nav{
         justify-self: center;
     }
+    main .apresentacao{
+        margin-left: 0px;
+        justify-content: center;
+    }
+    main .apresentacao .descricao{
+        justify-self: center;
+    }
+    main .apresentacao img{
+        width: 40vw;
+        justify-self: center;
+    }
+    main .apresentacao h1{
+        font-size: 2.5rem;
+        max-width: 250px;
+        line-height: 2.3rem;
+    }
+    main .apresentacao .descricao .detalhe{
+        width: 3rem;
+        left:-20px;
+        top:-45px;
+    }
+
+    main .experiencia{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 620px));
+        margin-top: 100px;
+        margin-left: 0;
+        max-width: none;
+        justify-content: center;
+        justify-items: center;
+    }
+    main .experiencia h1{
+        font-size: 5rem;
+        max-width: none;
+        margin-left: 0;
+        margin-bottom: 50px;
+        justify-self: start;
+    }
+    main .experiencia p{
+        margin-bottom: 60px;
+        font-size: 1rem;
+        max-width: auto;
+        justify-self: center;
+    }
+    main .experiencia .experiencias{
+        max-width: none;
+    }
+    main .experiencia .experiencia-item{
+        column-gap: 10vw;
+        grid-template-columns: minmax(200px,300px) minmax(120px, 190px);    
+    }
+    main .experiencia .periodo{
+        justify-self: start;
+    }
+    main .formacao{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 620px));
+        margin-top: 100px;
+        margin-left: 0;
+        max-width: none;
+        justify-content: center;
+        justify-items: center;
+    }
+    main .formacao h1{
+        font-size: 5rem;
+        max-width: none;
+        margin-left: 0;
+        margin-bottom: 50px;
+        justify-self: start;
+    }
+    main .formacao .descricao-formacao p{
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    
+    main .formacao::before{
+        display: none;
+    }
+    main .formacao .caixa{
+        margin-left: 0px;
+        justify-content: center;
+    }
+    main .formacao .intensivos{
+        grid-template-columns: 270px 150px;
+        justify-content: center;
+        max-width: none;
+    }
+    main .formacao .titulo-cursos::before{
+        position: absolute;
+        content: url(../imagens/cursos.svg);
+        left:60px;
+      }
+
+    main .formacao .linguas{
+        max-width:none;
+        justify-content: start;
+        margin-left: 97px;
+    }
+
+    footer{
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+    footer .texto-rodape p{
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        max-width: 500px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    footer .contato{
+        font-size: 1.5rem;
+        gap:10px;
+        justify-self: center;
+    }
+
+    footer::after {
+        position: absolute;
+        content: "";
+        width: 60vw;
+        height: 2px;
+        top:110px;
+        background-image: linear-gradient(#1100FF, #07006F);
+      }
+
+      footer .autoria{
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        position: relative;
+    }
+
+    footer::before{
+        position: absolute;
+        content: "";
+        width: 80vw;
+        height: 1px;
+        top:270px;
+        background-color: rgb(33, 33, 33);    
+    }
 }
+@media (max-width:645px){ /*Para valores ABAIXO que 521px*/
+    header h2{
+        font-size: 2rem;
+    }
+    header .logo{
+        width: 2.5rem
+    }
+    main .experiencias{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    main .experiencia h1{
+        font-size: 4rem;
+        justify-self: center;
+        margin-bottom: 0px;
+    }
+    main .experiencia p{
+    justify-self: center;    
+    }
+    main .formacao h1{
+        justify-self: center;
+    }
+    main .formacao p{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    main .formacao .caixa{
+        margin-top: 10px;
+        gap:50px;
+        grid-template-columns:200px;
+    }
+    main .formacao .intensivos{
+        margin-left: 50px;
+        justify-content: start;
+    }
+    main .formacao .titulo-cursos::before{
+        position: absolute;
+        content: url(../imagens/cursos.svg);
+        left:-40px;
+      }
+    main .formacao .linguas{
+            max-width:none;
+            justify-content: start;
+            margin-left: 50px;
+    }
+}
+
+
+
+
 
 
 
@@ -77,10 +261,8 @@
     } 
     main .apresentacao .descricao .detalhe{
         width: 5rem;
-        position: absolute;
         left:-40px;
         top:-60px;
-        z-index: -1;
     }
     main .experiencia{
         margin-left: 0;
@@ -127,11 +309,9 @@
         grid-template-columns: 270px 150px;
         color: white;
         position: relative;
-      }
-     main .formacao .intensivos{
         justify-content: center;
         max-width: none;
-    }
+      }
     main .formacao .linguas{
         margin-left: 102px;
         justify-content: start;
