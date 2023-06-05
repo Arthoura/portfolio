@@ -224,9 +224,6 @@
 
 
 @media (max-width:1200px) and (min-width: 805px){
-    body{
-        /* background-color: aqua; */
-    }
     header h2{
         font-size: 2rem;
     }
@@ -343,11 +340,7 @@
       }
 }
 @media (max-width:1400px) and (min-width:1200px){
-    body{
-        /* background-color: aqua; */
-    }
-    grid-template-columns: repeat(auto-fit, 800px);
-   main .formacao h1{
+    main .formacao h1{
     margin-left: 150px;
    }
     main .apresentacao{
