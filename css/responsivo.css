@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@media (max-width:805px){ /*Para tamanhos de tela abaixo de 855px e acima de 690px*/
+@media (max-width:805px){ /**/
     header .menu-burguer{
         width: 40px;
         display: block;
@@ -68,15 +68,24 @@
     main .experiencia p{
         margin-bottom: 60px;
         font-size: 1rem;
-        max-width: auto;
         justify-self: center;
     }
     main .experiencia .experiencias{
         max-width: none;
     }
+    main .experiencia .experiencias p{
+        margin-bottom: 30px;
+    }
     main .experiencia .experiencia-item{
         column-gap: 10vw;
-        grid-template-columns: minmax(200px,300px) minmax(120px, 190px);    
+        grid-template-columns: repeat(auto-fit, minmax(200px, 600px));
+        /* grid-template-columns: minmax(200px,300px) minmax(120px, 190px);     */
+    }
+    main .tecnologias{
+        margin-bottom: 30px;
+    }
+    main .contratante{
+        margin-top: 10px;
     }
     main .experiencia .periodo{
         justify-self: start;
@@ -167,7 +176,7 @@
         background-color: rgb(33, 33, 33);    
     }
 }
-@media (max-width:645px){ /*Para valores ABAIXO que 521px*/
+@media (max-width:645px){ /**/
     header h2{
         font-size: 2rem;
     }
@@ -187,15 +196,18 @@
     justify-self: center;    
     }
     main .formacao h1{
+        font-size: 4rem;
         justify-self: center;
     }
-    main .formacao p{
+    main .formacao .descricao-formacao{
         margin-left: 20px;
-        margin-right: 20px;
+        margin-right: 20px; 
+        /* align-self: start;
+        justify-self: start; */
     }
     main .formacao .caixa{
         margin-top: 10px;
-        gap:50px;
+        gap:30px;
         grid-template-columns:200px;
     }
     main .formacao .intensivos{
@@ -213,16 +225,30 @@
             margin-left: 50px;
     }
 }
-
-
-
-
-
-
-
-
-
-
+@media (max-width:503px){
+    main .experiencia h1{
+        margin-left: 20px;
+        justify-self: start;
+    }
+    main .experiencias{
+        margin-left: 20px;
+    }
+    main .formacao h1{
+        justify-self: start;
+        margin-left: 20px;
+    }
+    main .formacao .intensivos{
+        grid-template-columns: 270px 40px;
+    }
+    footer::after {
+        position: absolute;
+        content: "";
+        width: 60vw;
+        height: 2px;
+        top:125px;
+        background-image: linear-gradient(#1100FF, #07006F);
+      }
+}
 @media (max-width:1200px) and (min-width: 805px){
     header h2{
         font-size: 2rem;
