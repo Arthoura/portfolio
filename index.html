@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/responsivo.css">
 </head>
 
-<body>
+<body onresize="mudouTamanho()">
     <header class="grid">
         <div class="apresentacao">
             <img class="logo" src="imagens/logo.svg" alt="">
@@ -18,14 +18,14 @@
                 <h2>Arthur Arruda</h2>
             </a>
         </div>
-        <nav>
+        <nav id = "itens">
             <ul>
                 <li><a href="#experiencia">Experiência</a></li>
                 <li><a href="#formacao">Formação</a></li>
                 <li><a href="#contato">Contato</a> </li>
             </ul>
-            <img class = "menu-burguer" src="imagens/menu.svg" alt="icone-menu">
         </nav>
+        <img class = "menu-burguer" src="imagens/menu.svg" alt="icone-menu" onclick = "abrirMenu()">
     </header>
 
     <!-- Início do main -->
@@ -193,6 +193,7 @@
         </div>
         <p class="autoria">Arthur Arruda. Alguns direitos reservados</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

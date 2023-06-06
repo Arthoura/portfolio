@@ -4,11 +4,44 @@
     header .menu-burguer{
         width: 40px;
         display: block;
+        justify-self: center;
+        align-self: center;
     }
-    header ul{
-        display: none;
+    header .menu-burguer:hover{
+        cursor: pointer;
     }
-
+    header nav{
+        display: flex;
+        background-color: white;
+        border: 1px solid rgb(231, 231, 231);
+        border-radius: 4px;
+        padding: 10px;
+        position: absolute;
+        top: 90px;
+        right: 10vw;
+    }
+    header nav::before{
+        position: absolute;
+        content: "";
+        width: 0; 
+        height: 0; 
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid white;
+        top: -5px;
+        right: 15px;
+        z-index: 0;
+    }
+    header nav ul{
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        z-index: 1;
+    }
+    header nav a{
+        margin-right: 0px;
+        z-index: 1;
+    }
     header h2{
         justify-self: start;
         font-size: 3rem;
@@ -79,7 +112,15 @@
     main .experiencia .experiencia-item{
         column-gap: 10vw;
         grid-template-columns: repeat(auto-fit, minmax(200px, 600px));
+        grid-template-rows: repeat(auto-fit, 1fr);
         /* grid-template-columns: minmax(200px,300px) minmax(120px, 190px);     */
+    }
+    main .tecnologias{
+        max-height: none;
+        margin-bottom: 200px;
+    }
+    main .experiencia .experiencia-item .periodo{
+        align-self: end;
     }
     main .tecnologias{
         margin-bottom: 30px;
@@ -229,6 +270,9 @@
     main .experiencia h1{
         margin-left: 20px;
         justify-self: start;
+        font-size: 3rem;
+        line-height: 2.5rem;
+        margin-bottom: 20px;
     }
     main .experiencias{
         margin-left: 20px;
@@ -236,10 +280,24 @@
     main .formacao h1{
         justify-self: start;
         margin-left: 20px;
+        font-size: 3rem;
+        line-height: 2.5rem;
+        margin-bottom: 20px;
     }
     main .formacao .intensivos{
-        grid-template-columns: 270px 40px;
+        grid-template-columns: 210px 40px;
+        justify-content: center;
     }
+    main .formacao .linguas{
+        grid-template-columns: 210px 40px;
+        justify-content: center;
+    }
+    main .formacao .titulo-idiomas::before{
+        left: 20px;
+      }
+      main .formacao .titulo-cursos::before{
+        left: 20px;
+      }
     footer::after {
         position: absolute;
         content: "";

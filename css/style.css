@@ -184,7 +184,6 @@ main .experiencia-item .periodo{
 
 main .tecnologias{
   flex-wrap: wrap;
-  margin-bottom: 70px;
 }
 main .tecnologia-item h4{
   font-weight: 900;
@@ -195,9 +194,6 @@ main .tecnologia-item h4{
   border-radius: 4px;
   border: 1px solid #eaeaea;
   transition: .2s;
-}
-main .tecnologias{
-  max-height: 30px;
 }
 /* Animações dos nomes das tecnologias */
 main .tecnologia-item h4:hover{
