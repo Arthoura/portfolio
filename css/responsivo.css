@@ -82,7 +82,6 @@
         left:-20px;
         top:-45px;
     }
-
     main .experiencia{
         grid-template-columns: repeat(auto-fit, minmax(300px, 620px));
         margin-top: 100px;
@@ -163,12 +162,6 @@
         justify-content: center;
         max-width: none;
     }
-    main .formacao .titulo-cursos::before{
-        position: absolute;
-        content: url(../imagens/cursos.svg);
-        left:60px;
-      }
-
     main .formacao .linguas{
         max-width:none;
         justify-content: start;
@@ -287,17 +280,13 @@
     main .formacao .intensivos{
         grid-template-columns: 210px 40px;
         justify-content: center;
+        margin-left: 0px;
     }
     main .formacao .linguas{
         grid-template-columns: 210px 40px;
         justify-content: center;
+        margin-left: 0px;
     }
-    main .formacao .titulo-idiomas::before{
-        left: 20px;
-      }
-      main .formacao .titulo-cursos::before{
-        left: 20px;
-      }
     footer::after {
         position: absolute;
         content: "";
@@ -397,17 +386,6 @@
         margin-left: 102px;
         justify-content: start;
     }
-    main .formacao .titulo-idiomas::before{
-        position: absolute;
-        content: url(../imagens/linguas.svg);
-        left:-40px;
-      }
-      main .formacao .titulo-cursos::before{
-        position: absolute;
-        content: url(../imagens/cursos.svg);
-        left: 60px;
-      }
-
       footer .contato{
         font-size: 1.5rem;
         line-height: .5rem;
