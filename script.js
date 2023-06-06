@@ -1,15 +1,15 @@
 function abrirMenu(){
-    if(itens.style.display == 'flex'){
+    if(itens.style.display == 'block'){
         itens.style.display = 'none'
     }
     else{
-        itens.style.display = 'flex'
+        itens.style.display = 'block'
     }
 }
 
 function mudouTamanho(){
     if(window.innerWidth >= 805){
-        itens.style.display = 'flex'
+        itens.style.display = 'block'
     }
     else{
         itens.style.display = 'none'
