@@ -19,6 +19,7 @@
         position: absolute;
         top: 90px;
         right: 10vw;
+        z-index: 1;
     }
     header nav::before{
         position: absolute;
@@ -30,13 +31,13 @@
         border-bottom: 10px solid white;
         top: -5px;
         right: 15px;
-        z-index: 0;
+        z-index: -1;
     }
     header nav ul{
         display: flex;
         gap: 10px;
         flex-direction: column;
-        z-index: 1;
+
     }
     header nav a{
         margin-right: 0px;
