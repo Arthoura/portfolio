@@ -19,6 +19,23 @@
   --cor-background-formacao: #01001e;
   --cor-descricao-experiencia: #525252;
 }
+
+/* @media (prefers-color-scheme:dark){
+:root {
+  --cor-header:  #030031;
+  --cor-texto-principal: #eef0ff;
+  --cor-texto-destaque:#eef0ff;
+  
+  --cor-experiencia: #e1e1e1;
+  --cor-formacao: #323245;
+  --cor-texto-rodapé: #cccccc;
+  --cor-texto-rodapé2: #8f8f8f;
+  --cor-texto-formacao: #a9c7d8;
+  --cor-background-formacao: #01001e;
+  --cor-descricao-experiencia: #525252;
+}
+
+}  */
 a{
   text-decoration: none;
   color: var(--cor-texto-destaque);
@@ -65,8 +82,8 @@ nav a {
   margin-right: 40px;
   padding: 10px;
   border-radius: 4px;
-  border: 1px solid #e5e5e5;
-  background-color: #fcf9fe;
+  /* border: 1px solid #e5e5e5;
+  background-color: #fcf9fe; */
 }
 nav a:hover{
   background-color: var(--cor-texto-destaque);
